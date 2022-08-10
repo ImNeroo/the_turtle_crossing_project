@@ -25,7 +25,7 @@ while game_on:
     screen.update()
     if level < 5 and count % 6 == 0:
         car.create_car()
-    elif level > 5 and count % 3 == 0:
+    elif level >= 5 and count % 3 == 0:
         car.create_car()
     car.move_cars()
     # Detecta si el jugador colisiono con el carro
