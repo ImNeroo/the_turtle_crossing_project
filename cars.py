@@ -20,11 +20,9 @@ class Cars:
         new_car.goto(300, random.randint(-250, 250))
         self.all_cars.append(new_car)
 
-
     def move_cars(self):
         for car in self.all_cars:
             car.backward(self.car_speed)
-
 
     def level_up(self):
         self.car_speed += MOVE_INCREMENT
