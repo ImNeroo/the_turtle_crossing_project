@@ -13,12 +13,17 @@ class Player(Turtle):
         self.initial_pos()
         self.limit = FINISH_LINE_Y
 
-    def pos_restart(self):
-        self.initial_pos()
-
     def move(self):
         self.forward(MOVE_DISTANCE)
 
     def initial_pos(self):
         self.clear()
         self.goto(STARTING_POSITION)
+
+    def is_at_finish_line(self):
+        if self.ycor() > FINISH_LINE_Y:
+            return True
+        else:
+            return False
+
+
